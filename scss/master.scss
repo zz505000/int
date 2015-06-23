@@ -1,0 +1,21 @@
+.navbar-default {
+  background-color: hsl(222, 54%, 24%);
+  border: 0;
+  border-radius: 0;
+  color: hsl(0, 0%, 100%);
+
+  .navbar-nav > li > a {
+    color: hsl(0, 0%, 100%);
+  }
+}
+.navbar-brand {
+  padding: 10px 20px;
+
+  > img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.sidebar-nav {
+  background-color: hsl(192, 7%, 86%);
+}

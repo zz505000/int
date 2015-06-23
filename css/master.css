@@ -1,0 +1,10 @@
+.navbar-default { background-color: #1c305e; border: 0; border-radius: 0; color: white; }
+
+.navbar-default .navbar-nav > li > a { color: white; }
+
+.navbar-brand { padding: 10px 20px; }
+
+.navbar-brand > img { height: 100%; width: 100%; }
+
+.sidebar-nav { background-color: #d9ddde; }
+/*# sourceMappingURL=master.css.map */
