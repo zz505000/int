@@ -132,8 +132,9 @@ body {
   position: absolute;
   top: 0;
   width: 100%; }
-  .navbar-filter .container-fluid,
-  .navbar-filter .navbar-collapse {
+  .navbar-filter .container-fluid {
+    align-items: stretch;
+    display: flex;
     padding: 0; }
   .navbar-filter .navbar-toggle {
     border-color: white; }
@@ -152,6 +153,28 @@ body {
     .navbar-filter .navbar-nav > .open > a:focus, .navbar-filter .navbar-nav > .open > a:hover {
       background-color: #080808;
       color: white; }
+
+.navbar-nav {
+  display: flex; }
+
+.navbar-form {
+  align-items: stretch;
+  display: flex;
+  margin: 0;
+  padding: 0; }
+  .navbar-form .form-group {
+    align-items: center;
+    display: flex;
+    padding: 0 15px; }
+  .navbar-form .form-control {
+    border-radius: 16px; }
+  .navbar-form .btn {
+    background-color: #57595b;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    font-size: 1.6rem;
+    padding: 6px 21px; }
 
 .actions {
   align-items: center;
