@@ -71,12 +71,16 @@ body {
       }
       > a {
         color: hsl(0, 0%, 100%);
+        font-weight: 200;
 
         &:focus,
         &:hover {
           background-color: transparent;
           color: hsl(0, 0%, 100%);
         }
+      }
+      .dropdown-toggle {
+        font-weight: 700;
       }
     }
     > .open > a {
@@ -98,9 +102,6 @@ body {
     height: 100%;
     width: 100%;
   }
-}
-.dropdown-toggle {
-  font-weight: 700;
 }
 
 /*
@@ -172,7 +173,8 @@ body {
 
 .main {
   margin-bottom: 40px;
-  padding: 20px;
+  padding: 70px 20px 20px;
+  position: relative;
 
   .page-header {
     margin-top: 0;
@@ -184,6 +186,56 @@ body {
     padding-left: 40px;
   }
 }
+
+/* Filters */
+.navbar-filter {
+  background-color: hsl(210, 20%, 98%);
+  border: 0;
+  border-radius: 0;
+  color: hsl(0, 0%, 0%);
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .container-fluid,
+  .navbar-collapse {
+    padding: 0;
+  }
+  .navbar-toggle {
+    border-color: hsl(0, 0%, 100%);
+
+    &:focus,
+    &:hover {
+      border-color: hsl(0, 0%, 100%);
+    }
+    .icon-bar {
+      background-color: hsl(0, 0%, 100%);
+    }
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        border-right: 1px solid hsl(0, 0%, 0%);
+        color: hsl(0, 0%, 0%);
+      }
+      .dropdown-toggle {
+        font-weight: 700;
+      }
+    }
+    > .open > a {
+      background-color: hsl(0, 0%, 3%);
+      color: hsl(0, 0%, 100%);
+
+      &:focus,
+      &:hover {
+        background-color: hsl(0, 0%, 3%);
+        color: hsl(0, 0%, 100%);
+      }
+    }
+  }
+}
+
 .actions {
   align-items: center;
   display: flex;
