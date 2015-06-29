@@ -1,0 +1,1 @@
+var intScripts=function($){function t(){$(".results-table").dynatable()}return{init:t}}(jQuery);intScripts.init();

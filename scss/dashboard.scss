@@ -96,7 +96,7 @@ body {
   }
 }
 .navbar-brand {
-  padding: 10px 20px;
+  padding: 10px 36px;
 
   > img {
     height: 100%;
@@ -108,24 +108,19 @@ body {
  * Sidebar
  */
 
-/* Hide for mobile, show later */
 .sidebar {
-  display: none;
-}
-@media (min-width: 768px) {
-  .sidebar {
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
-    bottom: 0;
-    display: block;
-    left: 0;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    padding: 0 20px 20px;
-    position: fixed;
-    top: 50px;
-    z-index: 1000;
-  }
+  background-color: #f5f5f5;
+  border-right: 1px solid #eee;
+  bottom: 0;
+  display: block;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  padding: 0 20px 20px;
+  position: fixed;
+  top: 50px;
+  width: 200px;
+  z-index: 1000;
 }
 
 /* Sidebar navigation */
@@ -142,7 +137,7 @@ body {
     color: hsl(0, 0%, 0%);
     display: inline-flex;
     font-size: 1.6rem;
-    padding: 20px 10px;
+    padding: 10px 30px 10px 30px;
     width: 100%;
   }
   > .active {
@@ -157,7 +152,7 @@ body {
   display: inline-block;
   flex: 0 0 21px;
   height: 21px;
-  margin-right: 10px;
+  margin-right: 20px;
   width: 21px;
 }
 .icon-promo {
@@ -173,6 +168,7 @@ body {
 
 .main {
   margin-bottom: 40px;
+  margin-left: 200px;
   padding: 70px 20px 20px;
   position: relative;
 
@@ -193,15 +189,22 @@ body {
   border: 0;
   border-radius: 0;
   color: hsl(0, 0%, 0%);
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  left: 200px;
+  position: fixed;
+  top: 50px;
+  width: calc(100% - 200px);
 
   .container-fluid {
     align-items: stretch;
     display: flex;
+    height: 64px;
+    justify-content: space-between;
     padding: 0;
+
+    &:before,
+    &:after {
+      content: none;
+    }
   }
   .navbar-toggle {
     border-color: hsl(0, 0%, 100%);
@@ -219,6 +222,7 @@ body {
       > a {
         border-right: 1px solid hsl(0, 0%, 0%);
         color: hsl(0, 0%, 0%);
+        padding: 22px 20px;
       }
       .dropdown-toggle {
         font-weight: 700;
@@ -237,6 +241,7 @@ body {
   }
 }
 .navbar-nav {
+  align-items: stretch;
   display: flex;
 }
 .navbar-form {
