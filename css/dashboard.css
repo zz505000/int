@@ -207,6 +207,7 @@ tbody > tr {
   background-color: #e6eaeb;
   bottom: 0;
   position: fixed;
+  text-align: center;
   width: 100%;
   z-index: 1000; }
   .footer .text-muted {
