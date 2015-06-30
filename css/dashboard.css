@@ -129,7 +129,8 @@ body {
   left: 200px;
   position: fixed;
   top: 50px;
-  width: calc(100% - 200px); }
+  width: calc(100% - 200px);
+  z-index: 3; }
   .navbar-filter .container-fluid {
     align-items: stretch;
     display: flex;
@@ -214,4 +215,5 @@ tbody > tr {
   width: 100%;
   z-index: 1000; }
   .footer .text-muted {
-    margin: 10px 0; }
+    margin: 10px 0;
+    text-align: center; }

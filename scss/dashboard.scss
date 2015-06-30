@@ -193,6 +193,7 @@ body {
   position: fixed;
   top: 50px;
   width: calc(100% - 200px);
+  z-index: 3;
 
   .container-fluid {
     align-items: stretch;
@@ -308,5 +309,6 @@ tbody > tr {
 
   .text-muted {
     margin: 10px 0;
+    text-align: center;
   }
 }
