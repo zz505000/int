@@ -111,7 +111,7 @@ body {
 .main {
   margin-bottom: 40px;
   margin-left: 160px;
-  padding: 70px 20px 20px;
+  padding: 80px 20px 20px;
   position: relative; }
   .main .page-header {
     margin-top: 0; }
@@ -132,10 +132,6 @@ body {
   width: calc(100% - 160px);
   z-index: 3; }
   .navbar-filter .container-fluid {
-    align-items: stretch;
-    display: flex;
-    height: 64px;
-    justify-content: space-between;
     padding: 0; }
     .navbar-filter .container-fluid:before, .navbar-filter .container-fluid:after {
       content: none; }
@@ -158,12 +154,27 @@ body {
       background-color: #080808;
       color: white; }
 
+.dropdown-menu {
+  height: auto;
+  max-height: 180px;
+  overflow: auto; }
+  .dropdown-menu > .checkbox {
+    padding: 0 10px; }
+
+.datepicker {
+  max-height: none; }
+  .datepicker th {
+    text-align: center; }
+
 .navbar-nav {
   align-items: stretch;
   display: flex; }
 
+.filter-form {
+  display: flex;
+  justify-content: space-between; }
+
 .navbar-form {
-  align-items: stretch;
   display: flex;
   margin: 0;
   padding: 0; }

@@ -9,7 +9,8 @@
 
     <title>Promotion Tracking</title>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
     <link href="./css/dashboard.css" rel="stylesheet">
 
@@ -65,83 +66,103 @@
         <div class="main">
           <nav class="navbar navbar-filter">
             <div class="container-fluid">
-              <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Area <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Brand <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Starting Date <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ending Date <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Keywords">
+              <form class="filter-form">
+                <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Area <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="checkbox"><label class="checkbox">
+                        <input type="checkbox" id="checkbox1" value="option1"> All
+                      </label></li>
+                      <li class="checkbox"><label class="checkbox">
+                        <input type="checkbox" id="checkbox2" value="option2"> New York
+                      </label></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="checkbox"><label class="checkbox">
+                        <input type="checkbox" id="checkbox1" value="option1"> All
+                      </label></li>
+                      <li class="checkbox"><label class="checkbox">
+                        <input type="checkbox" id="checkbox2" value="option2"> Walmart
+                      </label></li>
+                      <li class="checkbox"><label class="checkbox">
+                        <input type="checkbox" id="checkbox3" value="option3"> Target
+                      </label></li>
+                      <li class="checkbox"><label class="checkbox">
+                        <input type="checkbox" id="checkbox4" value="option4"> Toys"R"Us
+                      </label></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Brand <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="All"> All</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Acadia"> Acadia</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Acco"> Acco</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Acer"> Acer</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="ACME MADE"> ACME MADE</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Adam"> Adam</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Adams"> Adams</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="ADIDAS"> ADIDAS</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Adventure"> Adventure</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Advil"> Advil</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Air Hogs"> Air Hogs</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Airborne"> Airborne</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Alera"> Alera</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Aleve"> Aleve</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Alex"> Alex</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Alka-Seltzer"> Alka-Seltzer</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="All Living Things"> All Living Things</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="allen + roth"> allen + roth</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Almay"> Almay</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Alpine"> Alpine</label></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="All"> All</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Apparel &amp; Accessories"> Apparel &amp; Accessories</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Arts &amp; Collectibles"> Arts &amp; Collectibles</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Baby &amp; Toddler"> Baby &amp; Toddler</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Beauty &amp; Personal Care"> Beauty &amp; Personal Care</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Books, DVDs &amp; Media"> Books, DVDs &amp; Media</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Camera &amp; Photography"> Camera &amp; Photography</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Coupons &amp; Rebates"> Coupons &amp; Rebates</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Electronics &amp; Computers"> Electronics &amp; Computers</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Grocery"> Grocery</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Health Care &amp; Medical"> Health Care &amp; Medical</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Hobbies &amp; Crafts"> Hobbies &amp; Crafts</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Home &amp; Garden"> Home &amp; Garden</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Occasions &amp; Gifts"> Occasions &amp; Gifts</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Office Products"> Office Products</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Pets &amp; Animals"> Pets &amp; Animals</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Shopping Misc."> Shopping Misc.</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Sports &amp; Fitness"> Sports &amp; Fitness</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Tools &amp; Hardware"> Tools &amp; Hardware</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Toys &amp; Games"> Toys &amp; Games</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Travel &amp; Tourism"> Travel &amp; Tourism</label></li>
+                      <li class="checkbox"><label class="checkbox"><input type="checkbox" value="Vehicle Parts &amp; Care"> Vehicle Parts &amp; Care</label></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Starting Date <span class="caret"></span></a>
+                    <div class="dropdown-menu datepicker"></div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ending Date <span class="caret"></span></a>
+                    <div class="dropdown-menu datepicker"></div>
+                  </li>
+                </ul>
+                <div class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Keywords">
+                  </div>
+                  <button type="submit" class="btn btn-default">Search</button>
                 </div>
-                <button type="submit" class="btn btn-default">Search</button>
               </form>
             </div><!-- /.container-fluid -->
           </nav>
@@ -327,9 +348,13 @@
       </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
     <script src="./javascripts/jquery.dynatable.js"></script>
+    <script src="./javascripts/jquery.customSelect.min.js"></script>
+    <script src="./javascripts/bootstrap-datepicker.min.js"></script>
     <script src="./javascripts/scripts.js"></script>
   </body>
 </html>

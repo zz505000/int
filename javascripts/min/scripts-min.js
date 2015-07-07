@@ -1,1 +1,1 @@
-var intScripts=function($){function t(){$(".results-table").dynatable()}return{init:t}}(jQuery);intScripts.init();
+var intScripts=function($){function n(){$(".results-table").DataTable({dom:""}),$(".navbar-nav").on("click",".dropdown-menu",function(n){n.stopPropagation()}),$(".datepicker").datepicker()}return{init:n}}(jQuery);intScripts.init();
