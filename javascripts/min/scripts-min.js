@@ -1,1 +1,1 @@
-var intScripts=function($){function n(){$(".results-table").DataTable({dom:""}),$(".navbar-nav").on("click",".dropdown-menu",function(n){n.stopPropagation()}),$(".datepicker").datepicker()}return{init:n}}(jQuery);intScripts.init();
+var intScripts=function($){function n(){$(".results-table").DataTable({dom:""}),$(".navbar-nav").on("click",".dropdown-menu",function(n){n.stopPropagation()}),$(".datepicker").on("click",function(n){n.stopPropagation()}),$(".input-daterange").datepicker({autoclose:!0})}return{init:n}}(jQuery);intScripts.init();

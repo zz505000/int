@@ -1,14 +1,23 @@
 var intScripts = (function ($) {
   function init () {
-    // $('.results-table').dynatable();
     $('.results-table').DataTable({
       'dom': ''
     });
-    // $('select').customSelect();
     $('.navbar-nav').on('click', '.dropdown-menu', function(e) {
       e.stopPropagation();
     });
-    $('.datepicker').datepicker();
+    $('.datepicker').on('click', function(e) {
+      e.stopPropagation();
+    });
+    $('.input-daterange').datepicker({
+      autoclose: true
+    });
+    // $('.datepicker').on('changeDate', function() {
+    //   var $datepicker = $(this);
+    //   $datepicker.next('input').val(
+    //     $datepicker.datepicker('getFormattedDate')
+    //   );
+    // });
   }
 
   return {

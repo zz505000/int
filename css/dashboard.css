@@ -161,10 +161,14 @@ body {
   .dropdown-menu > .checkbox {
     padding: 0 10px; }
 
+.dropdown .form-group {
+  padding: 10px; }
+
+.input-daterange {
+  min-width: 250px; }
+
 .datepicker {
   max-height: none; }
-  .datepicker th {
-    text-align: center; }
 
 .navbar-nav {
   align-items: stretch;
@@ -199,11 +203,10 @@ body {
   .actions > * + * {
     margin-left: 2rem; }
 
-thead > tr > th {
+.results-table thead > tr > th {
   background: #d2deea;
   color: #004c8a; }
-
-tbody > tr {
+.results-table tbody > tr {
   border-bottom: 1px solid #7e8081; }
 
 .item-name {

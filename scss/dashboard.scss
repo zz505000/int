@@ -246,12 +246,16 @@ body {
     padding: 0 10px;
   }
 }
+.dropdown {
+  .form-group {
+    padding: 10px;
+  }
+}
+.input-daterange {
+  min-width: 250px;
+}
 .datepicker {
   max-height: none;
-
-  th {
-    text-align: center;
-  }
 }
 .navbar-nav {
   align-items: stretch;
@@ -293,12 +297,14 @@ body {
     margin-left: 2rem;
   }
 }
-thead > tr > th {
-  background: hsl(210, 36%, 87%);
-  color: hsl(207, 100%, 27%);
-}
-tbody > tr {
-  border-bottom: 1px solid hsl(210, 1%, 50%);
+.results-table {
+  thead > tr > th {
+    background: hsl(210, 36%, 87%);
+    color: hsl(207, 100%, 27%);
+  }
+  tbody > tr {
+    border-bottom: 1px solid hsl(210, 1%, 50%);
+  }
 }
 .item-name {
   font-weight: 700;
