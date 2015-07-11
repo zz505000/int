@@ -1,7 +1,11 @@
 var intScripts = (function ($) {
   function init () {
     $('.results-table').DataTable({
-      'dom': ''
+      "columnDefs": [
+        { "orderable": false, "targets": -1 }
+      ],
+      'dom': '',
+      'pageLength': 30
     });
     $('.navbar-nav').on('click', '.dropdown-menu', function(e) {
       e.stopPropagation();
