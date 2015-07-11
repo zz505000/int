@@ -6,21 +6,21 @@ var intScripts = (function ($) {
     $('.navbar-nav').on('click', '.dropdown-menu', function(e) {
       e.stopPropagation();
     });
-    // $('.datepicker').on('click', function(e) {
-    //   e.stopPropagation();
-    // });
-    // $('.input-daterange').datepicker({
-    //   autoclose: true
-    // });
-    $('.filter-form').datepicker({
-      inputs: $('.datepicker').toArray()
+    $('.datepicker').on('click', function(e) {
+      e.stopPropagation();
     });
-    $('.datepicker').on('changeDate', function() {
-      var $datepicker = $(this);
-      $datepicker.next('input').val(
-        $datepicker.datepicker('getFormattedDate')
-      );
+    $('.input-daterange').datepicker({
+      autoclose: true
     });
+    // $('.filter-form').datepicker({
+    //   inputs: $('.datepicker').toArray()
+    // });
+    // $('.datepicker').on('changeDate', function() {
+    //   var $datepicker = $(this);
+    //   $datepicker.next('input').val(
+    //     $datepicker.datepicker('getFormattedDate')
+    //   );
+    // });
   }
 
   return {
