@@ -3,7 +3,7 @@
  */
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px; }
+  padding-top: 60px; }
 
 /*
  * Global add-ons
@@ -68,7 +68,7 @@ body {
   /* Scrollable contents if viewport is shorter than content. */
   padding: 0 20px 20px;
   position: fixed;
-  top: 50px;
+  top: 60px;
   width: 160px;
   z-index: 1000; }
 
@@ -135,7 +135,7 @@ body {
   color: black;
   left: 160px;
   position: fixed;
-  top: 50px;
+  top: 60px;
   width: calc(100% - 160px);
   z-index: 3; }
   .navbar-filter .container-fluid {
