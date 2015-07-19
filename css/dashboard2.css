@@ -64,7 +64,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   /* Scrollable contents if viewport is shorter than content. */
-  padding: 0 20px 20px;
+  padding: 0 0 20px;
   position: fixed;
   top: 60px;
   width: 200px;
@@ -72,6 +72,7 @@ body {
 
 /* Sidebar navigation */
 .panel-body ul {
+  margin-bottom: 0;
   padding: 0; }
 
 /*
@@ -96,55 +97,54 @@ body {
   right: 12px;
   top: 28px; }
 
-.navbar-filter {
-  background-color: #f9fafb;
+.filter-form .datepickers,
+.filter-form .keywords {
+  padding: 0 15px; }
+.filter-form .panel {
+  border-radius: 0;
+  border-width: 0;
+  box-shadow: none; }
+  .filter-form .panel:first-child {
+    border-top: 1px solid #878b8c; }
+  .filter-form .panel:last-child {
+    border-bottom: 1px solid #878b8c; }
+  .filter-form .panel + .panel {
+    border-top: 1px solid #878b8c;
+    margin-top: 0; }
+.filter-form .panel-heading {
+  padding: 0; }
+.filter-form .panel-title > a {
+  background: linear-gradient(to bottom, white 0%, #d4d8d9 100%);
+  display: block;
+  padding: 20px 15px;
+  position: relative; }
+  .filter-form .panel-title > a:hover, .filter-form .panel-title > a:focus, .filter-form .panel-title > a:active {
+    text-decoration: none; }
+  .filter-form .panel-title > a::after {
+    content: '\f105';
+    font: normal normal normal 14px/1 FontAwesome;
+    line-height: 1;
+    position: absolute;
+    right: 15px;
+    transform: rotate(90deg);
+    transition: all .2s ease;
+    top: 20px; }
+  .filter-form .panel-title > a.collapsed::after {
+    transform: rotate(0deg);
+    transition: all .2s ease; }
+.filter-form .checkbox {
+  margin: 0; }
+  .filter-form .checkbox + .checkbox {
+    margin-top: 10px; }
+.filter-form button[type='submit'] {
+  background-color: #57595b;
   border: 0;
   border-radius: 0;
-  color: black;
-  left: 160px;
-  position: fixed;
-  top: 60px;
-  width: calc(100% - 160px);
-  z-index: 3; }
-  .navbar-filter .container-fluid {
-    padding: 0; }
-    .navbar-filter .container-fluid:before, .navbar-filter .container-fluid:after {
-      content: none; }
-  .navbar-filter .navbar-toggle {
-    border-color: white; }
-    .navbar-filter .navbar-toggle:focus, .navbar-filter .navbar-toggle:hover {
-      border-color: white; }
-    .navbar-filter .navbar-toggle .icon-bar {
-      background-color: white; }
-  .navbar-filter .navbar-nav > li > a {
-    border-right: 1px solid black;
-    color: black;
-    padding: 20px 35px 20px 25px; }
-  .navbar-filter .navbar-nav > li .dropdown-toggle {
-    font-weight: 700; }
-  .navbar-filter .navbar-nav > .open > a {
-    background-color: #080808;
-    color: white; }
-    .navbar-filter .navbar-nav > .open > a:focus, .navbar-filter .navbar-nav > .open > a:hover {
-      background-color: #080808;
-      color: white; }
-
-.dropdown-menu {
-  height: auto;
-  max-height: 180px;
-  overflow: auto; }
-  .dropdown-menu > .checkbox {
-    padding: 0 10px; }
-
-.dropdown .form-group {
-  padding: 10px; }
-
-.datepicker {
-  max-height: none; }
-
-.navbar-nav {
-  align-items: stretch;
-  display: flex; }
+  color: white;
+  display: block;
+  font-size: 1.6rem;
+  padding: 15px 0;
+  width: 100%; }
 
 .navbar-form {
   display: flex;

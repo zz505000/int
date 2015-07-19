@@ -114,7 +114,7 @@ body {
   left: 0;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  padding: 0 20px 20px;
+  padding: 0 0 20px;
   position: fixed;
   top: 60px;
   width: 200px;
@@ -124,6 +124,7 @@ body {
 /* Sidebar navigation */
 .panel-body {
   ul {
+    margin-bottom: 0;
     padding: 0;
   }
 }
@@ -156,79 +157,73 @@ body {
   right: 12px;
   top: 28px;
 }
-.navbar-filter {
-  background-color: hsl(210, 20%, 98%);
-  border: 0;
-  border-radius: 0;
-  color: hsl(0, 0%, 0%);
-  left: 160px;
-  position: fixed;
-  top: 60px;
-  width: calc(100% - 160px);
-  z-index: 3;
+.filter-form {
+  .datepickers,
+  .keywords {
+    padding: 0 15px;
+  }
+  .panel {
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
 
-  .container-fluid {
+    &:first-child {
+      border-top: 1px solid hsl(192, 2%, 54%);
+    }
+    &:last-child {
+      border-bottom: 1px solid hsl(192, 2%, 54%);
+    }
+    + .panel {
+      border-top: 1px solid hsl(192, 2%, 54%);
+      margin-top: 0;
+    }
+  }
+  .panel-heading {
     padding: 0;
-
-    &:before,
-    &:after {
-      content: none;
-    }
   }
-  .navbar-toggle {
-    border-color: hsl(0, 0%, 100%);
+  .panel-title > a {
+    background: linear-gradient(to bottom, hsl(0, 0%, 100%) 0%, hsl(192, 6%, 84%) 100%);
+    display: block;
+    padding: 20px 15px;
+    position: relative;
 
+    &:hover,
     &:focus,
-    &:hover {
-      border-color: hsl(0, 0%, 100%);
+    &:active {
+      text-decoration: none;
     }
-    .icon-bar {
-      background-color: hsl(0, 0%, 100%);
+    &::after {
+      content: '\f105';
+      font: normal normal normal 14px/1 FontAwesome;
+      line-height: 1;
+      position: absolute;
+      right: 15px;
+      transform: rotate(90deg);
+      transition: all .2s ease;
+      top: 20px;
+    }
+    &.collapsed::after {
+      transform: rotate(0deg);
+      transition: all .2s ease;
     }
   }
-  .navbar-nav {
-    > li {
-      > a {
-        border-right: 1px solid hsl(0, 0%, 0%);
-        color: hsl(0, 0%, 0%);
-        padding: 20px 35px 20px 25px;
-      }
-      .dropdown-toggle {
-        font-weight: 700;
-      }
-    }
-    > .open > a {
-      background-color: hsl(0, 0%, 3%);
-      color: hsl(0, 0%, 100%);
+  .checkbox {
+    margin: 0;
 
-      &:focus,
-      &:hover {
-        background-color: hsl(0, 0%, 3%);
-        color: hsl(0, 0%, 100%);
-      }
+    + .checkbox {
+      margin-top: 10px;
     }
   }
-}
-.dropdown-menu {
-  height: auto;
-  max-height: 180px;
-  overflow: auto;
-
-  > .checkbox {
-    padding: 0 10px;
+  button[type='submit'] {
+    background-color: hsl(220, 2%, 35%);
+    border: 0;
+    border-radius: 0;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    font-size: 1.6rem;
+    padding: 15px 0;
+    width: 100%;
   }
-}
-.dropdown {
-  .form-group {
-    padding: 10px;
-  }
-}
-.datepicker {
-  max-height: none;
-}
-.navbar-nav {
-  align-items: stretch;
-  display: flex;
 }
 .navbar-form {
   display: flex;
