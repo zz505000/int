@@ -35,7 +35,7 @@ body {
     color: white;
     font-size: 1.6rem;
     font-weight: 200;
-    margin: 0 16px;
+    margin: 0 40px;
     padding: 17px 10px; }
     .navbar-int .navbar-nav > li > a:focus, .navbar-int .navbar-nav > li > a:hover {
       background-color: transparent;
@@ -43,7 +43,8 @@ body {
   .navbar-int .navbar-nav > li.active > a {
     border-bottom-color: #e68141; }
   .navbar-int .navbar-nav > li .dropdown-toggle {
-    font-weight: 700; }
+    font-weight: 700;
+    padding: 17px 30px; }
   .navbar-int .navbar-nav > .open > a {
     background-color: #080808;
     color: white; }
@@ -99,8 +100,8 @@ body {
 .caret {
   display: block;
   position: absolute;
-  right: -4px;
-  top: 24px; }
+  right: 10px;
+  top: 25px; }
 
 .filter-form .datepickers,
 .filter-form .keywords {
