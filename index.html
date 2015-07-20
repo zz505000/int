@@ -40,8 +40,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Help/Support</a></li>
-            <li><a href="#">Settings</a></li>
+            <li class="active"><a href="#">Promotional Tracking</a></li>
+            <li><a href="#">Reviews Tracking</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Julie <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -60,20 +60,30 @@
     <div class="container-fluid">
       <div class="row">
         <div class="sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#"><i class="icon icon-promo"></i> Promotion Tracking <span class="sr-only">(current)</span></a></li>
-            <li><a href="#"><i class="icon icon-review"></i> Reviews Tracking</a></li>
-          </ul>
-        </div>
-        <div class="main">
-          {% if error %}<p class="error"><strong>Error:</strong> {{ error }}</p>{% endif %}
-          <nav class="navbar navbar-filter">
-            <div class="container-fluid">
-              <form class="filter-form">
-                <ul class="nav navbar-nav">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Area <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+          <form class="filter-form">
+            <div class="form-group">
+              <button type="submit" class="btn btn-default">Search</button>
+            </div>
+            <div class="form-group keywords">
+              <input type="text" class="form-control" placeholder="Keywords">
+            </div>
+            <div class="form-group datepickers">
+              <div class="input-daterange" id="datepicker">
+                <input type="text" class="input-sm form-control" name="start" placeholder="Start Date">
+                <input type="text" class="input-sm form-control" name="end" placeholder="End Date">
+              </div>
+            </div>
+            <div class="panel-group" id="accordion">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#area" class="collapsed">Area</a>
+                  </h4>
+                </div>
+                <div id="area" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul>
                       <li class="checkbox"><label class="checkbox">
                         <input type="checkbox" value="All"> All
                       </label></li>
@@ -83,12 +93,21 @@
                       </label></li>
                       {% endfor %}
                     </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#store" class="collapsed">Store</a>
+                  </h4>
+                </div>
+                <div id="store" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul>
                       <li class="checkbox"><label class="checkbox">
-                        <input type="checkbox" value="option1"> All
+                        <input type="checkbox" value="All"> All
                       </label></li>
                       {% for d in stores %}
                       <li class="checkbox"><label class="checkbox">
@@ -96,44 +115,52 @@
                       </label></li>
                       {% endfor %}
                     </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Brand <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#brand" class="collapsed">Brand</a>
+                  </h4>
+                </div>
+                <div id="brand" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul>
                       <li class="checkbox"><label class="checkbox"><input type="checkbox" value="All"> All</label></li>
                       {% for d in brands %}
                       <li class="checkbox"><label class="checkbox"><input type="checkbox" value="{{ d.name }}"> {{ d.name }}</label></li>
                       {% endfor %}
                     </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#category" class="collapsed">Category</a>
+                  </h4>
+                </div>
+                <div id="category" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul>
                       <li class="checkbox"><label class="checkbox"><input type="checkbox" value="All"> All</label></li>
                       {% for d in categorys %}
                       <li class="checkbox"><label class="checkbox"><input type="checkbox" value="{{ d.category }}"> {{ d.category }}</label></li>
                       {% endfor %}
                     </ul>
-                  </li>
-                </ul>
-                <div class="navbar-form navbar-left" role="search">
-                  <div class="form-group">
-                    <div class="input-daterange input-group" id="datepicker">
-                      <input type="text" class="input-sm form-control" name="start">
-                      <span class="input-group-addon">to</span>
-                      <input type="text" class="input-sm form-control" name="end">
-                    </div>
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Keywords">
-                  </div>
-                  <button type="submit" class="btn btn-default">Search</button>
                 </div>
-              </form>
-            </div><!-- /.container-fluid -->
-          </nav>
+              </div>
 
+            </div>
+          </form>
+        </div>
+        <div class="main">
           <h1 class="page-header sr-only">Promotion Tracking</h1>
+          {% if error %}<p class="error"><strong>Error:</strong> {{ error }}</p>{% endif %}
 
           <div class="actions">
             <button class="btn btn-default export-all">Export all</button>
