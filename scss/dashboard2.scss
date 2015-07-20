@@ -77,6 +77,7 @@ body {
         &:focus,
         &:hover {
           background-color: transparent;
+          border-color: transparent;
           color: hsl(0, 0%, 100%);
         }
       }
@@ -85,7 +86,7 @@ body {
       }
       .dropdown-toggle {
         font-weight: 700;
-        padding: 17px 30px;
+        padding: 17px 35px 17px 25px;
       }
     }
     > .open > a {
@@ -161,7 +162,7 @@ body {
 .caret {
   display: block;
   position: absolute;
-  right: 10px;
+  right: 15px;
   top: 25px;
 }
 .filter-form {
@@ -277,12 +278,16 @@ body {
 table.dataTable thead .sorting:after,
 table.dataTable thead .sorting_asc:after,
 table.dataTable thead .sorting_desc:after {
+  align-items: center;
+  display: flex;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
   opacity: 1;
   text-rendering: auto;
+  top: 0;
   transform: translate(0, 0);
 }
 table.dataTable thead .sorting:after {
