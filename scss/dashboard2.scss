@@ -67,15 +67,20 @@ body {
   .navbar-nav {
     > li {
       > a {
+        border-bottom: 8px solid transparent;
         color: hsl(0, 0%, 100%);
         font-weight: 200;
-        padding: 20px 36px;
+        margin: 0 36px;
+        padding: 16px 0;
 
         &:focus,
         &:hover {
           background-color: transparent;
           color: hsl(0, 0%, 100%);
         }
+      }
+      &.active > a {
+        border-bottom-color: hsl(23, 77%, 58%);
       }
       .dropdown-toggle {
         font-weight: 700;
@@ -154,8 +159,8 @@ body {
 .caret {
   display: block;
   position: absolute;
-  right: 12px;
-  top: 28px;
+  right: -24px;
+  top: 24px;
 }
 .filter-form {
   .datepickers,
