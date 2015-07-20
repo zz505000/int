@@ -67,11 +67,12 @@ body {
   .navbar-nav {
     > li {
       > a {
-        border-bottom: 8px solid transparent;
+        border-bottom: 6px solid transparent;
         color: hsl(0, 0%, 100%);
+        font-size: 1.6rem;
         font-weight: 200;
-        margin: 0 36px;
-        padding: 16px 0;
+        margin: 0 16px;
+        padding: 17px 10px;
 
         &:focus,
         &:hover {
@@ -159,7 +160,7 @@ body {
 .caret {
   display: block;
   position: absolute;
-  right: -24px;
+  right: -4px;
   top: 24px;
 }
 .filter-form {
