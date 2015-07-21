@@ -214,6 +214,9 @@ body {
       transition: all .2s ease;
     }
   }
+  .input-daterange input + input {
+    margin-top: 10px;
+  }
   .checkbox {
     margin: 0;
 
